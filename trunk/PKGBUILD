@@ -16,8 +16,9 @@ makedepends=('cmake' 'inetutils' 'ninja' 'python' 'swig')
 conflicts=('intel-tbb')
 provides=("intel-tbb=$pkgver")
 replaces=('intel-tbb')
-source=(https://github.com/oneapi-src/oneTBB/archive/v$pkgver/$pkgname-$pkgver.tar.gz)
-sha512sums=('96da2bc351fd64dfa854f8e6cabc1c4e53af3d55760e99d6f83ad53779c727af333d13d6be0828ed70371cf796498d2063e9dd0e4b2f6451623bb5d28ccbf20b')
+source=(https://github.com/oneapi-src/oneTBB/releases/download/v$pkgver/oneapi-$pkgname-$pkgver-lin.tgz)
+sha512sums=('b3c2d326b998fe0d14ed5c1bb5cfc75c3f554ebedb84ca4d9cfc14796c194be28315bac8df8280fc06e73a9f83fa690917f3d55ea30cf33c818790ff49a50444')
+#sha512sums=('96da2bc351fd64dfa854f8e6cabc1c4e53af3d55760e99d6f83ad53779c727af333d13d6be0828ed70371cf796498d2063e9dd0e4b2f6451623bb5d28ccbf20b')
 
 build() {
   cd oneTBB-$pkgver
